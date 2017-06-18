@@ -9,7 +9,7 @@ package customer;
  *
  * @author G50-70
  */
-import ADMIN.DatabaseConnection;
+import ADMIN.DatabaseConnection;//comment 
 import ADMIN.adminscreen;
 import java.awt.TextField;
 import java.sql.Connection;
@@ -189,7 +189,7 @@ public class login extends javax.swing.JFrame {
         // TODO add your handling code here:
          conn1=DatabaseConnection.connectdb();
         try{
-             
+             System.out.print("hello");
             String sql1="select * from customer_details where login_id=? and password=?";
             pst1=(OraclePreparedStatement) conn1.prepareStatement(sql1);
             pst1.setString(1,login_id.getText());
